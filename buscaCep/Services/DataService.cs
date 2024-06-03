@@ -12,14 +12,16 @@ namespace buscaCep.Services
         public static async Task<Endereco> GetEnderecoByCep(String cep)
         {
             Endereco end;
+
             using (HttpClient client = new HttpClient())
             {
-                string url = "https://cep.metoda.com.br/endereco/by=cep?cep" + cep;
+                string url = "https://cep.metoda.com.br/endereco/by=cep?cep=" + cep;
+
                 HttpResponseMessage response = await client.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    string json = response.Content.ReadAsStringAsync().Result();
+                    string json = response.Content.ReadAsStringAsync().Result;
 
                     end = JsonConvert.DeserializeObject<Endereco>(json);
                 }
@@ -43,7 +45,8 @@ namespace buscaCep.Services
 
                 if (response.IsSuccessStatusCode)
                 {
-                    using JsonArrayAttribute = response.Content.ReadAsStringAsync().Result;
+
+                    string json = response.Content.ReadAsStringAsync().Result;
                     arr_bairros = JsonConvert.DeserializeObject<List<Bairro>>(json);
                 }
                 else throw new Exception(response.RequestMessage.Content.ToString());
@@ -79,7 +82,7 @@ namespace buscaCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync()("https://cep.metoda.com.br/Logradouro/by=bairro?Id_cidade=" + id_cidade + "Bairro=" + bairro);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/Logradouro/by=bairro?Id_cidade=" + id_cidade + "Bairro=" + bairro);
 
                 if (response.IsSuccessStatusCode)
                 {

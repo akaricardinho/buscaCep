@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace buscaCep.Models
 {
-    internal class Bairro
+    public class Bairro
     {
-        public string descricao bairro { get; set; }
+        public string descricao_bairro { get; set; }
     }
 }

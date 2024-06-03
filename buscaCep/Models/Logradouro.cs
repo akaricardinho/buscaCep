@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace buscaCep.Models
 {
-    internal class Logradouro
+    public class Logradouro
     {
         public string CEP {  get; set; }
         public string id_logradouro { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace buscaCep.Models
 {
-    internal class Cidade
+    public class Cidade
     {
         public int id_cidade { get; set; }
         public string descricao { get; set; }

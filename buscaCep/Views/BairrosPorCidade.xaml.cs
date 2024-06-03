@@ -50,7 +50,7 @@ public partial class BairrosPorCidade : ContentPage
 
             Cidade cidade_selecionada = disparador.SelectedItem as Cidade;
 
-            List<Cidade> arr_bairros =
+            List<Bairro> arr_bairros =
                 await DataService.GetBairrosByIdCidade(cidade_selecionada.id_cidade);
 
             lista_bairros.Clear();
