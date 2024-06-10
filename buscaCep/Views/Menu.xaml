@@ -4,13 +4,13 @@
              x:Class="buscaCep.Views.Menu"
              Title="Menu">
     <VerticalStackLayout>
-        <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *">
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Api Busca Cep"/>
+        <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *, *, *">
+            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HorizontalTextAlignment="Center" Text="Menu     Api Busca Cep"/>
 
-            <Button Grid.Row="1" Grid.Column="0" Text="Buscar Cep" Clicked="Button_Clicked" />
-            <Button Grid.Row="1" Grid.Column="1" Text="Buscar Cidade" Clicked="Button_Clicked_1" />
-            <Button Grid.Row="2" Grid.Column="0" Text="Buscar Ruas do Bairro" Clicked="Button_Clicked_2" />
-            <Button Grid.Row="2" Grid.Column="1" Text="Buscar Endereço Pelo Cep" Clicked="Button_Clicked_3" />
+            <Button BackgroundColor="#F82D2D" CornerRadius="10" Margin="5, 50, 5, 5" WidthRequest="400" Grid.Row="1" Grid.Column="1" Text="Buscar Cep" Clicked="Button_Clicked" />
+            <Button BackgroundColor="#F82D2D" CornerRadius="10" Margin="5" WidthRequest="400" Grid.Row="2" Grid.Column="1" Text="Buscar Cidade"  Clicked="Button_Clicked_1" />
+            <Button BackgroundColor="#F82D2D" CornerRadius="10" Margin="5" WidthRequest="400" Grid.Row="3" Grid.Column="1" Text="Buscar Ruas do Bairro" Clicked="Button_Clicked_2" />
+            <Button BackgroundColor="#F82D2D" CornerRadius="10" Margin="5" WidthRequest="400" Grid.Row="4" Grid.Column="1" Text="Buscar Endereço Pelo Cep" Clicked="Button_Clicked_3" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
